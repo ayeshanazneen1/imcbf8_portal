@@ -1,6 +1,15 @@
 import Image from "next/image";
 
 export default function Navbar() {
+  const faculty = [
+    {id: 1, name: "aamir pare", whatsApp: "03005345391"},
+    {id: 2, name: "aamir pare", whatsApp: "03005345391"},
+    {id: 3, name: "aamir pare", whatsApp: "03005345391"},
+    {id: 4, name: "aamir pare", whatsApp: "03005345391"},
+    {id: 5, name: "aamir pare", whatsApp: "03005345391"},
+    {id: 6, name: "aamir pare", whatsApp: "03005345391"},
+    {id: 7, name: "aamir pare", whatsApp: "03005345391"},
+  ];
   return (
     <div className="bg-white shadow-sm">
       {/* Top contact bar */}
@@ -9,11 +18,22 @@ export default function Navbar() {
           <div className="flex items-center space-x-6">
             <span className="flex items-center">
               <span className="text-teal-600 mr-1">📞</span>
-              <span className="text-gray-800 font-medium">(456) 789-0123</span>
+              <span className="text-gray-800 font-medium">(051) 9261801</span>
             </span>
             <span className="flex items-center">
-              <span className="text-teal-600 mr-1">✉️</span>
-              <span className="text-gray-800 font-medium">office@abcschool.com</span>
+              <img
+                src="/landingPage/navbar/youtube.png"
+                alt="YouTube"
+                className="w-5 h-5 mr-1"
+              />
+              <a
+                href="https://www.youtube.com/@imcbf84islamabad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-800 font-medium hover:text-gray-600"
+              >
+                youtube.com/@imcbf84islamabad
+              </a>
             </span>
           </div>
         </div>
@@ -23,22 +43,40 @@ export default function Navbar() {
       <nav className="bg-white px-4 py-3">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center mr-3">
-              <span className="text-white font-bold">ABC</span>
-            </div>
-            <span className="text-xl font-semibold text-gray-800">ABC Matric High School</span>
+          <div className="flex items-center space-x-4">
+            <img
+              src="/landingPage/navbar/imcbLogo.jpg"
+              alt="YouTube"
+              className="w-10 h-10 mr-1"
+            />
+            <span className="text-xl font-semibold text-gray-800">
+              Islamabad Model College For Boys F-8/4
+            </span>
           </div>
 
           {/* Navigation links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-teal-600">Explore</a>
-            <a href="#" className="text-gray-700 hover:text-teal-600">About us</a>
-            <a href="#" className="text-gray-700 hover:text-teal-600">Vision</a>
-            <a href="#" className="text-gray-700 hover:text-teal-600">Team</a>
-            <a href="#" className="text-gray-700 hover:text-teal-600">Facilities</a>
-            <a href="#" className="text-gray-700 hover:text-teal-600">Testimonials</a>
-            <a href="#" className="text-gray-700 hover:text-teal-600">Contact</a>
+            <a href="#" className="text-gray-700 hover:text-teal-600">
+              Explore
+            </a>
+            <a href="#" className="text-gray-700 hover:text-teal-600">
+              About us
+            </a>
+            <a href="#" className="text-gray-700 hover:text-teal-600">
+              Vision
+            </a>
+            <a href="#" className="text-gray-700 hover:text-teal-600">
+              Team
+            </a>
+            <a href="#" className="text-gray-700 hover:text-teal-600">
+              Facilities
+            </a>
+            <a href="#" className="text-gray-700 hover:text-teal-600">
+              Testimonials
+            </a>
+            <a href="#" className="text-gray-700 hover:text-teal-600">
+              Contact
+            </a>
           </div>
 
           {/* Mobile menu button */}

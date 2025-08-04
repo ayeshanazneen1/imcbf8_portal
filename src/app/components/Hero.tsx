@@ -8,12 +8,12 @@ export default function Hero() {
           {/* Left content */}
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-              ABC School debuts for arts, discovery, and connections.
+              Islamabad Model College For Boys F-8/4 Islamabad
             </h1>
             <p className="text-lg lg:text-xl text-teal-50 leading-relaxed">
-              The ABC School is rooted in the belief that every student should be 
-              challenged, engaged, and supported in a learning environment that 
-              places no limits on what they can achieve.
+              IMCB, F-8/4, is a prestigious institution of the Federal Capital
+              of Pakistan. It is like a polar star in the galaxy of Model
+              Colleges.
             </p>
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
               Learn more
@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="relative">
             <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
               <Image
-                src="/landingPage/classroom.jpg"
+                src="/landingPage/hero/school.jpg"
                 alt="Student in classroom"
                 fill
                 className="object-cover"

@@ -12,7 +12,7 @@ export default function PrincipalMessage() {
         <div className="absolute -left-20 top-80 w-28 h-28 bg-blue-200/20 rounded-full"></div>
         <div className="absolute left-4 bottom-32 w-24 h-24 bg-purple-300/30 rounded-full"></div>
         <div className="absolute -left-12 bottom-8 w-32 h-32 bg-blue-200/25 rounded-full"></div>
-        
+
         {/* Right side circles */}
         <div className="absolute -right-16 top-12 w-28 h-28 bg-purple-200/30 rounded-full"></div>
         <div className="absolute -right-8 top-40 w-32 h-32 bg-blue-200/25 rounded-full"></div>
@@ -20,7 +20,7 @@ export default function PrincipalMessage() {
         <div className="absolute -right-20 bottom-40 w-36 h-36 bg-blue-200/20 rounded-full"></div>
         <div className="absolute right-4 bottom-16 w-28 h-28 bg-purple-200/35 rounded-full"></div>
         <div className="absolute -right-12 bottom-64 w-20 h-20 bg-blue-300/30 rounded-full"></div>
-        
+
         {/* Additional scattered circles */}
         <div className="absolute left-1/4 top-16 w-16 h-16 bg-purple-200/25 rounded-full"></div>
         <div className="absolute right-1/3 top-24 w-12 h-12 bg-blue-300/35 rounded-full"></div>
@@ -38,8 +38,8 @@ export default function PrincipalMessage() {
                 <Image
                   src="/landingPage/principal.jpg"
                   alt="Principal"
-                  width={400}
-                  height={533}
+                  width={300}
+                  height={350}
                   className="object-cover w-full h-full"
                   priority
                 />
@@ -63,7 +63,12 @@ export default function PrincipalMessage() {
           <div className="space-y-8">
             <div className="space-y-6">
               <p className="text-2xl lg:text-3xl font-medium text-gray-800 leading-relaxed">
-                At our School, we aim to empower students with the skills, knowledge, and values needed for success in a global context.
+                IMCB, F-8/4, Islamabad is a vibrant and prominent institution
+                that enjoys the reputation of being one of the most prestigious
+                educational institutions in the capital city. I feel honored to
+                be the Principal of this brilliant institution that shapes
+                young, impressionable minds towards their path of excellence and
+                self-discovery.
               </p>
             </div>
 
@@ -73,21 +78,21 @@ export default function PrincipalMessage() {
                 <h3 className="text-xl font-bold text-gray-900">Josheph Ken</h3>
                 <p className="text-gray-600 font-medium">Principal</p>
               </div>
-              
+
               {/* Signature */}
               <div className="relative">
                 <svg className="w-32 h-16" viewBox="0 0 128 64" fill="none">
-                  <path 
-                    d="M8 32 Q20 16 32 32 T56 32 Q68 16 80 32 Q92 48 104 32 Q110 28 120 32" 
-                    stroke="#374151" 
-                    strokeWidth="2" 
+                  <path
+                    d="M8 32 Q20 16 32 32 T56 32 Q68 16 80 32 Q92 48 104 32 Q110 28 120 32"
+                    stroke="#374151"
+                    strokeWidth="2"
                     fill="none"
                     className="signature-path"
                   />
-                  <path 
-                    d="M12 40 Q24 28 36 40 Q48 52 60 40" 
-                    stroke="#374151" 
-                    strokeWidth="1.5" 
+                  <path
+                    d="M12 40 Q24 28 36 40 Q48 52 60 40"
+                    stroke="#374151"
+                    strokeWidth="1.5"
                     fill="none"
                     className="signature-path"
                   />

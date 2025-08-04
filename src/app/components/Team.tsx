@@ -6,32 +6,32 @@ export default function Team() {
   const teamMembers = [
     {
       id: 1,
-      name: "Andy R.K",
-      role: "Director",
+      name: "DR. Asad Faiz",
+      role: "Associate Professor",
       image: "/landingPage/andy.jpg",
     },
     {
       id: 2,
-      name: "Sarha J.L",
-      role: "Lecturer",
+      name: "Mr. Naeem-ur-Rehman",
+      role: "Associate Professor",
       image: "/landingPage/sarha.jpg",
     },
     {
       id: 3,
-      name: "Telly H.S",
-      role: "Director",
+      name: "Mrs. Kausar Shaheen",
+      role: "Senior Headmistress",
       image: "/landingPage/telly.jpg",
     },
     {
       id: 4,
-      name: "Jack M.L",
-      role: "Lecturer",
+      name: "Mr.Imtiaz Ali Bukhari	",
+      role: "Teachers’ Coordinator IGCSE",
       image: "/landingPage/Jack.jpg",
     },
     {
       id: 5,
-      name: "Teressa D.O",
-      role: "Executive",
+      name: "Mr. Ghayoor Hussain ",
+      role: "Associate Professor",
       image: "/landingPage/Teressa.jpg",
     },
   ];

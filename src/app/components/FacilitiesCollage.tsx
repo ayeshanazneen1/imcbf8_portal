@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 type Facility = {
   id: number;
@@ -17,35 +17,40 @@ const FacilitiesCollage = () => {
     {
       id: 1,
       title: "Modern Gym",
-      description: "State-of-the-art fitness equipment and spacious workout areas to maintain physical wellness and promote healthy lifestyle habits among students.",
-      image: "/landingPage/gym.jpg",
-      position: "top-left"
+      description:
+        "State-of-the-art fitness equipment and spacious workout areas to maintain physical wellness and promote healthy lifestyle habits among students.",
+      image: "/landingPage/facilities/gym.jpg",
+      position: "top-left",
     },
     {
       id: 2,
       title: "Co-working Space",
-      description: "Collaborative work environments designed to foster creativity, teamwork, and innovative thinking among students and faculty members.",
-      image: "/landingPage/coworking.jpg",
-      position: "top-right"
+      description:
+        "Collaborative work environments designed to foster creativity, teamwork, and innovative thinking among students and faculty members.",
+      image: "/landingPage/facilities/coworkingSpace.jpg",
+      position: "top-right",
     },
     {
       id: 3,
       title: "Robotics Lab",
-      description: "Advanced robotics laboratory equipped with cutting-edge technology for hands-on learning in automation, AI, and engineering.",
-      image: "/landingPage/robotics.jpg",
-      position: "bottom-left"
+      description:
+        "Advanced robotics laboratory equipped with cutting-edge technology for hands-on learning in automation, AI, and engineering.",
+      image: "/landingPage/facilities/lab.jpg",
+      position: "bottom-left",
     },
     {
       id: 4,
       title: "Library",
-      description: "Extensive collection of books, digital resources, and quiet study spaces to support academic research and learning excellence.",
-      image: "/landingPage/library.jpg",
-      position: "bottom-right"
-    }
+      description:
+        "Extensive collection of books, digital resources, and quiet study spaces to support academic research and learning excellence.",
+      image: "/landingPage/facilities/library.jpg",
+      position: "bottom-right",
+    },
   ];
 
   const getImageClasses = (position: string) => {
-    const baseClasses = "relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out";
+    const baseClasses =
+      "relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out";
     switch (position) {
       case "top-left":
         return `${baseClasses} rounded-tl-2xl`;
@@ -61,13 +66,14 @@ const FacilitiesCollage = () => {
   };
 
   const getOverlayClasses = (facility: Facility) => {
-    const isTopImage = facility.position === "top-left" || facility.position === "top-right";
+    const isTopImage =
+      facility.position === "top-left" || facility.position === "top-right";
     return `absolute inset-0 transition-opacity duration-300 ${
-      hoveredFacility?.id === facility.id ? 'opacity-100' : 'opacity-0'
+      hoveredFacility?.id === facility.id ? "opacity-100" : "opacity-0"
     } ${
-      isTopImage 
-        ? 'bg-gradient-to-b from-black/80 via-black/40 to-transparent'
-        : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent'
+      isTopImage
+        ? "bg-gradient-to-b from-black/80 via-black/40 to-transparent"
+        : "bg-gradient-to-t from-black/80 via-black/40 to-transparent"
     }`;
   };
 
@@ -88,19 +94,22 @@ const FacilitiesCollage = () => {
                   src={facility.image}
                   alt={facility.title}
                   className={`w-full h-full object-cover transition-all duration-500 ${
-                    hoveredFacility?.id === facility.id 
-                      ? 'scale-110 brightness-75' 
-                      : 'scale-100 brightness-90 hover:brightness-75'
+                    hoveredFacility?.id === facility.id
+                      ? "scale-110 brightness-75"
+                      : "scale-100 brightness-90 hover:brightness-75"
                   }`}
                 />
-                
+
                 {/* Hover Overlay */}
                 <div className={getOverlayClasses(facility)}>
-                  <div className={`absolute left-0 right-0 p-6 text-white transform transition-transform duration-300 ${
-                    facility.position === "top-left" || facility.position === "top-right"
-                      ? 'top-0'
-                      : 'bottom-0'
-                  }`}>
+                  <div
+                    className={`absolute left-0 right-0 p-6 text-white transform transition-transform duration-300 ${
+                      facility.position === "top-left" ||
+                      facility.position === "top-right"
+                        ? "top-0"
+                        : "bottom-0"
+                    }`}
+                  >
                     <h3 className="text-2xl font-bold mb-3 text-yellow-400">
                       {facility.title}
                     </h3>
@@ -115,12 +124,17 @@ const FacilitiesCollage = () => {
 
           {/* Central Information Container */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="bg-[#009481] shadow-2xl p-6 md:p-8 max-w-sm mx-4 text-center transform transition-all duration-300 hover:scale-105">
+            <div className="bg-[#009481] shadow-2xl p-6 md:p-8 max-w-md mx-4 text-center transform transition-all duration-300 hover:scale-105">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
                 Our Facilities
               </h2>
               <p className="text-white text-sm md:text-base leading-relaxed mb-6">
-                Immerse yourself in a conducive learning environment with our top-notch facilities. State-of-the-art laboratories, extensive libraries, and modern classrooms create a setting where curiosity and exploration flourish.
+                The college provides helpful facilities for students. There are
+                academic activities led by experienced teachers. Students can
+                enjoy co-curricular activities and the college has well-equipped
+                labs, a library, a mosque, and a gym. Transport is available for
+                students, and there is an infirmary for first aid. Career
+                counseling is offered to help students plan their future.
               </p>
               <button className="bg-white text-[#009481] font-semibold px-6 py-2 hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 More Info
@@ -136,7 +150,10 @@ const FacilitiesCollage = () => {
         {/* Mobile Info Cards (shown below collage on small screens) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 md:hidden">
           {facilities.map((facility) => (
-            <div key={facility.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <div
+              key={facility.id}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="w-full h-48 rounded-lg overflow-hidden mb-4">
                 <img
                   src={facility.image}

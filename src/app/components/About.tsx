@@ -4,27 +4,27 @@ import { useState } from "react";
 
 export default function About() {
   const [currentImage, setCurrentImage] = useState(0);
-  
+
   const images = [
     {
-      src: "/landingPage/about1.jpg",
-      alt: "School Auditorium"
+      src: "/landingPage/about/about1.jpg",
+      alt: "School Auditorium",
     },
     {
-      src: "/landingPage/about2.jpg",
-      alt: "Classroom with desks"
+      src: "/landingPage/about/about2.jpg",
+      alt: "Classroom with desks",
     },
     {
-      src: "/landingPage/about3.jpg",
-      alt: "School Building"
-    }
+      src: "/landingPage/about/about3.jpg",
+      alt: "School Building",
+    },
   ];
 
   const stats = [
     { number: "2100+", label: "Students" },
     { number: "95%", label: "Sports" },
     { number: "235+", label: "Staffs" },
-    { number: "100%", label: "Discipline" }
+    { number: "100%", label: "Discipline" },
   ];
 
   const nextImage = () => {
@@ -52,23 +52,43 @@ export default function About() {
                   priority={currentImage === 0}
                 />
               </div>
-              
+
               {/* Navigation arrows */}
-              <button 
+              <button
                 onClick={prevImage}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all"
               >
-                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
-              
-              <button 
+
+              <button
                 onClick={nextImage}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all"
               >
-                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
@@ -81,15 +101,19 @@ export default function About() {
                 About Our School
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                ABC Institution offers courses of study that are on the frontiers 
-                of knowledge and it connects the spiritual and practical 
-                dimensions of intellectual life.
+                Islamabad Model College For Boys F-8/4 is serving for the last
+                of 36 years and has a brilliant record of producing talented
+                students of nation. Located at the heart of Islamabad, this
+                institutes boasts a memorable past.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                School for Advanced Studies is committed to a comprehensive academic 
-                and collegial program which propels its community to become ethical, 
-                engaged members of a diverse, multicultural society in ways that foster 
-                global consciousness.
+                IMCB F8/4 initially started as an English medium secondary
+                school in 1978. It was elevated to college level in 1984. As a
+                center of excellence, the college offers education from class 1
+                to higher secondary school level in various disciplines. What
+                makes this institution different from others in our imagination,
+                team spirit, diligence and commitment to ensure the dynamic
+                academic process.
               </p>
             </div>
 
