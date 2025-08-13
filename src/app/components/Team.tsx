@@ -1,99 +1,128 @@
 "use client";
-
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
-export default function Team() {
+export default function ModernTeam() {
+  const [hoveredMember, setHoveredMember] = useState<number | null>(null);
+
   const teamMembers = [
     {
       id: 1,
       name: "DR. Asad Faiz",
       role: "Associate Professor",
-      image: "/landingPage/andy.jpg",
+      department: "Science",
+      experience: "15+ Years",
+      specialization: "Physics & Mathematics",
+      color: "bg-slate-800"
     },
     {
       id: 2,
       name: "Mr. Naeem-ur-Rehman",
       role: "Associate Professor",
-      image: "/landingPage/sarha.jpg",
+      department: "Languages",
+      experience: "12+ Years",
+      specialization: "English Literature",
+      color: "bg-slate-800"
     },
     {
       id: 3,
       name: "Mrs. Kausar Shaheen",
       role: "Senior Headmistress",
-      image: "/landingPage/telly.jpg",
+      department: "Administration",
+      experience: "20+ Years",
+      specialization: "Educational Management",
+      color: "bg-slate-800"
     },
     {
       id: 4,
-      name: "Mr.Imtiaz Ali Bukhari	",
-      role: "Teachers’ Coordinator IGCSE",
-      image: "/landingPage/Jack.jpg",
+      name: "Mr. Imtiaz Ali Bukhari",
+      role: "Teachers' Coordinator",
+      department: "IGCSE Programs",
+      experience: "10+ Years",
+      specialization: "IGCSE Curriculum",
+      color: "bg-slate-800"
     },
     {
       id: 5,
-      name: "Mr. Ghayoor Hussain ",
+      name: "Mr. Ghayoor Hussain",
       role: "Associate Professor",
-      image: "/landingPage/Teressa.jpg",
+      department: "Social Sciences",
+      experience: "14+ Years",
+      specialization: "History & Geography",
+      color: "bg-slate-800"
     },
   ];
 
   return (
-    <section className="bg-gray-50 py-16 lg:py-20 relative overflow-hidden">
-      {/* Background Decorative Circles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-8 left-8 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute top-8 left-28 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute top-8 left-48 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute top-8 right-48 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute top-28 left-8 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute top-28 left-28 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute bottom-28 left-8 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute bottom-28 left-28 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute bottom-28 left-48 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-        <div className="absolute bottom-8 right-48 w-16 h-16 bg-blue-200 rounded-full opacity-60"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        {/* Section Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-            Meet Our Team Of Dedicated Educators
+    <section id="team" className="relative bg-slate-50 py-12 overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-tight mb-3">
+            Meet Our Team of
+            <br />
+            <span className="text-teal-600">Dedicated Educators</span>
           </h2>
+          
+          <p className="text-sm text-slate-600 max-w-2xl mx-auto">
+            Our passionate faculty members bring years of experience and dedication to nurture young minds.
+          </p>
         </div>
 
-        {/* Team Cards Container */}
-        <div className="flex justify-center">
-          <div className="flex flex-wrap lg:flex-nowrap gap-0 max-w-6xl">
-            {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                className="w-full md:w-1/2 lg:w-1/5 relative"
-              >
-                {/* Team Member Card */}
-                <div className="relative w-full h-80">
-                  <img
-                    src={member.image}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+          {teamMembers.map((member) => (
+            <div
+              key={member.id}
+              className="group relative"
+              onMouseEnter={() => setHoveredMember(member.id)}
+              onMouseLeave={() => setHoveredMember(null)}
+            >
+              <div className="relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                <div className="aspect-[3/4] relative overflow-hidden">
+                  <Image
+                    src={`/landingPage/${member.id === 1 ? 'andy.jpg' : 
+                          member.id === 2 ? 'sarha.jpg' : 
+                          member.id === 3 ? 'telly.jpg' : 
+                          member.id === 4 ? 'Jack.jpg' : 'Teressa.jpg'}`}
                     alt={`${member.name} - ${member.role}`}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-
-                  {/* Member Info Bar */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 p-3 z-20"
-                    style={{ backgroundColor: "#009184" }}
-                  >
-                    <div className="text-center">
-                      <h3 className="font-semibold text-sm mb-1 text-white">
-                        {member.name}
-                      </h3>
-                      <p className="text-xs" style={{ color: "#bdf2ec" }}>
-                        {member.role}
-                      </p>
+                  
+                  <div className="absolute inset-0 bg-slate-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                    <div className="text-white space-y-1">
+                      <p className="text-xs font-medium">{member.department}</p>
+                      <p className="text-xs opacity-90">{member.experience}</p>
+                      <p className="text-xs opacity-80">{member.specialization}</p>
                     </div>
                   </div>
                 </div>
+
+                <div className={`${member.color} p-2`}>
+                  <div className="text-center">
+                    <h3 className="font-bold text-white text-xs mb-1 leading-tight">
+                      {member.name}
+                    </h3>
+                    <p className="text-white/90 text-xs">
+                      {member.role}
+                    </p>
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+
+        {/* View More Faculty Button */}
+        <div className="text-center">
+          <Link
+            href="/faculty"
+            className="inline-flex items-center px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+          >
+            View More Faculty
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </section>
